@@ -52,10 +52,18 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'bibloudo.urls'
 
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+
 TEMPLATES = [
     {
+        
+        'DIRS': ['templates',],
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

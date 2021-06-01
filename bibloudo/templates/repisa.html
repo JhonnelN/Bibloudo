@@ -1,0 +1,66 @@
+<!doctype html>
+<title>Example</title>
+<style>
+.container { 
+  display: flex;
+  }
+.red {
+  background: orangered;
+  display: flex;
+  flex-direction: column;
+}
+.green {
+  background: yellowgreen;
+  display: flex;
+  flex-direction: column;
+}
+.black {
+  background: black;
+  display: flex;
+  flex-direction: column;
+}
+.blue {
+  background: steelblue;
+  display: flex;
+  flex-direction: column;
+}
+.yellow {
+  background: yellow;
+  display: flex;
+  flex-direction: column;
+}
+.white {
+  background: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+.container div {
+  font-size: 5vw;
+  padding: .5em;
+  color: white;
+  flex: 1;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+</style>
+<div class="wrapper">
+    <div class="container"> 
+        <div class="red">Lic. Administracion</div>
+        <div class="green">Lic. Contaduria P</div>
+        <div class="blue">Lic. Gerencia R.H</div>
+    </div>
+    <div class="container"> 
+        <div class="green">Ing. Agronomia</div>
+        <div class="blue">Ing. Sistemas</div>
+        <div class="black">Ing. Petroleo</div>
+    </div>
+    <div class="container">
+        <div class="yellow">Tecnologia Alimentos</div>
+        <div class="red">Ing. Producción Animal</div>
+        <div class="white">Otros</div>
+    </div>
+  </div>
