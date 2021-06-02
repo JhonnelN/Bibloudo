@@ -16,6 +16,6 @@ def index(request):
     # Renderiza la plantilla HTML index.html con los datos en la variable contexto
     return render(
         request,
-        'index.html',
+        'vistas_html/index.html',
         #context={'num_books':num_books,'num_instances':num_instances,'num_instances_available':num_instances_available,'num_authors':num_authors},
     )
