@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import include
+from django.conf.urls import include, url
 from bibloudo.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
+    url(r'^usuario/', include('apps.usuario.urls', namespace='usuario'))
+
     
     #path('biblioteca/', biblioteca)
 ]
