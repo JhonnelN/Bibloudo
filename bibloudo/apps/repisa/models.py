@@ -60,6 +60,13 @@ class Semestre(models.Model):
 
 #---------------------------------------------------------
 class Libro(models.Model):
+    def libros_path(self, filename):
+        return 'libros/{0}/{1}_{2}.{3}'.format(
+            self.carrera,
+            self.titulo,
+            self.Autor,
+            filename.split('.')[-1]
+        )
     # clave primaria
     id = models.AutoField(primary_key=True)
     # --------
@@ -72,7 +79,7 @@ class Libro(models.Model):
         "Fecha de creacion", auto_now=True, auto_now_add=False
     )
 
-    Libro =  models.FileField(default="", blank=False, null=False)
+    Libro =  models.FileField(default="", blank=False, null=False, upload_to=libros_path)
     # Metadatos
     class Meta:
 
@@ -82,4 +89,7 @@ class Libro(models.Model):
 
     def __str__(self):
         return self.titulo
+
+
+
 
