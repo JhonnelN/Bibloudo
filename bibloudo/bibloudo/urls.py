@@ -24,10 +24,11 @@ from rest_framework_simplejwt.views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    # path('', index),
+    path('', include('apps.repisa.urls', namespace='repisa')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),   
-    #path('biblioteca/', biblioteca)
+    # path('biblioteca/', biblioteca)
 ]
 urlpatterns += [
     path('ingresar/', include('django.contrib.auth.urls')),
